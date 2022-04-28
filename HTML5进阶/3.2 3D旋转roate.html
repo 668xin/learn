@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D旋转</title>可以延x,y，z,轴旋转
+    可以根据左手法则判断，旋转是的角度正负，四指的方向为正值
+
+    要看出旋转的效果需要用到，透视
+    <style>
+        body {
+            perspective: 300px;
+        }
+
+        img {
+            display: block;
+            margin: 100px auto;
+            transition: all 1s;
+        }
+
+        img:hover {
+            transform: rotateX(45deg);
+        }
+
+        body img:nth-child(2):hover {
+            transform: rotateY(45deg);
+
+        }
+    </style>
+</head>
+
+<body>
+    <img src="./media/pig.jpg" alt="">
+    <img src="./media/pig.jpg" alt="">
+
+</body>
+
+</html>

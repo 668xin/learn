@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D呈现</title>transform-styleL:preserve-3d; 默认的是flat不保留
+    控制子元素是否开启三维立体环境
+    有些时候，在一个父盒子里面两个盒子叠加在一起的时候，进行3d的旋转，不会执行，这是就要用。
+    代码写给父级，但是影响的是子盒子
+    <style>
+        body {
+            perspective: 500px;
+        }
+
+        .box {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            transition: all 2s;
+            /* 让子元素保持3d立体空间环境 */
+            transform-style: preserve-3d;
+        }
+
+        .box:hover {
+            transform: rotateY(60deg);
+        }
+
+        .box div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: pink;
+        }
+
+        .box div:last-child {
+            background-color: purple;
+            transform: rotateX(60deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div></div>
+        <div></div>
+    </div>
+</body>
+
+</html>

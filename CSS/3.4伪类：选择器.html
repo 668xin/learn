@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类选择器</title>
+    伪类选择器: 用冒号:
+    用于添加某种选择器的特殊样式，给链接添加效果或者选择元素
+    a:link 选择所有未被访问的链接
+    a:visited 选择所有已被访问的链接
+    a:hover 选择鼠标指针位于其上的链接
+    a:active 选择活动链接（鼠标按下未弹起的链接）
+    注意；按照LVHA的顺序写
+    a 链接要自己指定样式
+    <style>
+        /* 1.未访问的链接a:link */
+        a:link {
+            color: pink;
+            text-decoration: none;
+        }
+
+        /* 2.访问过的链接a:visited */
+        a:visited {
+            color: orange;
+        }
+
+        /* 3.选择鼠标经过的链接 */
+        a:hover {
+            color: skyblue;
+        }
+
+        /* 4.鼠标按下还没有弹起是的链接 */
+        a:active {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://www.huya.com/101583" target="_blank">小猪佩奇</a>
+    <a href="https://www.huya.com/buqiuren">熊出没</a>
+    <a href="#">猪猪侠</a>
+    <a href="#">我们</a>
+</body>
+
+</html>

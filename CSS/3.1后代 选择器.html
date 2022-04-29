@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>f复合选择器</title>
+    后代选择器: 元素1空格元素2
+    元素一是父级元素二是子级 选择的是元素2
+    可以一直后代找下去
+    可以是所有的基础选择器
+    <style>
+        ol li {
+            color: blue;
+        }
+
+        body li {
+            color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <ol>
+        <li> pink</li>
+        <li>green</li>
+        <li>black</li>
+    </ol>
+    <ul>
+        <li>我是子级</li>
+        <li>我是ul的孩子</li>
+        <li>我是孙子</li>
+    </ul>
+</body>
+
+</html>

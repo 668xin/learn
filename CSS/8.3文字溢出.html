@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字溢出</title>
+    单行文本溢出显示省略号，满足三个条件
+    1.先强制文本一行显示
+    white-space: nowrap;(默认是normal自动换行)
+    2.超出部分隐藏
+    overflow: hidden;
+    3.文字用省略号代替超出部分
+    text-overflow: ellipsis;
+
+    多行文本省略显示 条件
+    overflow: hodden;
+    text-overflow: ellipsis;
+    /* 弹性伸缩盒子模型显示 */
+    display: -webkit-box;
+    /* 限制在一个块元素显示的文本的行数 */
+    -webkit-line-clamp: 3;
+    /* 设置或检索伸缩盒对象的子元素的排列方式 */
+    -webkit-box-orient: vertical;
+    <style>
+        .dan {
+            width: 150px;
+            height: 80px;
+            background-color: pink;
+            margin: 100px auto;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .duo {
+            width: 150px;
+            height: 65px;
+            background-color: pink;
+            margin: 100px auto;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            /* 弹性伸缩盒子模型显示 */
+            display: -webkit-box;
+            /* 限制在一个块元素显示的文本的行数 */
+            -webkit-line-clamp: 3;
+            /* 设置或检索伸缩盒对象的子元素的排列方式 */
+            -webkit-box-orient: vertical;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dan">欢迎来到王者荣耀，小虎集市</div>
+    <div class="duo">
+        啥也不说，此处省略一万字,啥也不说，此处省略一万字此处省略一万字
+    </div>
+</body>
+
+</html>

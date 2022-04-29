@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除浮动</title>
+</head>
+
+<body>
+    有些网页内容太多不适合给父盒子指定高度，最理想的时让子盒子撑开父盒子
+    由于浮动的元素不占有原来的位置，所以会对后面的元素产生影响需要清除浮动
+
+    ---本质是清除浮动造成的影响
+    如果父盒子有高度则不用清除浮动
+
+    清除浮动的方法
+    1.额外标签法
+    -在最后一个浮动的标签后面加一个空标签<div style="clear:both"></div>或者<br />
+    必须是块级元素
+
+    2.给父级添加overflow属性 值是 hidden、auto、scroll。都可以下
+
+    3.——:after 伪元素，给父元素添加代码
+    -在style中添加父盒子类名为clearfix
+    .clearfix:after{
+    content:"";
+    display: block;
+    height: 0; 隐藏起来
+    clear: both;
+    visibility: hidden; 隐藏起来
+    }
+    .clearfix{
+    *zoom: 1;
+    }
+
+    4.--双伪元素清除浮动，给父元素添加
+    .clearfix:before,.clearfix:after{
+    content:"";
+    display:table; 转换为块级元素并且在一行显示
+    }
+    .clearfix:after{
+    clear:both;
+    }
+    .clearfix{
+    *zoom:1;
+    }
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS的背景</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            background-image: url(../img/王者荣耀.png);
+            /* background-repeat: no-repeat;不平铺 */
+            /* background-repeat: repeat-x; x轴平铺 */
+            background-repeat: no-repeat;
+            background-position: center right;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        背景颜色 background-color
+        背景的图片 background-image: url
+        便于控制位置
+        背景平铺 background-repeat:repeat 平铺
+        no-repeat 不平铺 repeat-x/ repeat-y
+        默认情况是平铺的
+    </div>
+    <div>
+        背景图片的位置: background-position: left top
+        后可以写两个方位名词 与顺序无关
+        如果只指定了一个，另一个默认居中对齐
+        也可以是精确的坐标 x y
+    </div>
+    背景图像的固定 background-attachment
+    scroll 背景图片随对象内容滚动
+    fixed 背景图像是固定的
+
+    也可用复合写法 背景颜色 背景地址
+    背景透明度 rgba
+</body>
+
+</html>

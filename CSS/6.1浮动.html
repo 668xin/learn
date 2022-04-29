@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动</title>
+    <style>
+        .a {
+            float: left;
+            height: 200px;
+            width: 200px;
+            background-color: pink;
+        }
+
+        .aa {
+            float: none;
+            width: 300px;
+            height: 300px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    -- 浮动: 可以改变元素标签的默认排列方式
+    1.最经典的应用就是让多个块级元素在一行排列 中间没有空隙
+    2.多个块级元素横向排列可以用浮动
+
+    --float属性用于创建浮动，将其移到一边，直至左边缘或者右边缘触及
+    ..................块级元素或者另一个浮动框的边缘
+    float: left / right / none;
+
+    《浮动的特性》
+    1.添加浮动会脱离标准流的控制移到指定位置（脱标） 浮在上面
+    2.浮动的盒子不在保留原先的位置
+    3.浮动的元素有行内块元素的特点
+    --任何元素都可以添加浮动，添加了浮动之后就会有行内块元素的相似特性
+
+    -一般的网页布局的策略
+    --先用标准流的父元素排列上下的位置，内部子元素采用浮动来调整位置
+
+    浮动的注意点
+    1.先用标准流的父元素排列上下的位置，内部子元素采用浮动来调整位置
+    2.一个盒子里有多个盒子，如果其中一个盒子浮动了，那么应该全都浮动防止出错
+    ---浮动的盒子会影响后面的标准流，不会影响前面的标准流
+    <div class="a"></div>
+    <div class="aa"></div>
+</body>
+
+</html>

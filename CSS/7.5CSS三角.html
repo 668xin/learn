@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 三角制作</title>
+    1.在css中设置 宽，高为0的盒子
+    2.利用边框设置 边框大小可设置三角形大小
+    3.不想要的设置为透明
+
+    <style>
+        .box1 {
+            width: 0;
+            height: 0;
+            border-top: 10px solid pink;
+            border-right: 10px solid red;
+            border-left: 10px solid green;
+            border-bottom: 10px solid skyblue;
+        }
+
+        .box2 {
+            width: 0;
+            height: 0;
+            border: 50px solid transparent;
+            /* (transparent 透明) */
+            border-top-color: pink;
+            margin: 100px auto;
+        }
+
+        .jd {
+            width: 120px;
+            position: relative;
+            height: 250px;
+            background-color: skyblue;
+        }
+
+        .jd span {
+            position: absolute;
+            top: -20px;
+            right: 15px;
+            width: 0;
+            height: 0;
+            border: 10px solid transparent;
+            border-bottom-color: pink;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="jd">
+        <span></span>
+    </div>
+</body>
+
+</html>

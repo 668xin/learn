@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>淘宝轮播图</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .tb-promo {
+            position: relative;
+            width: 520px;
+            height: 280px;
+            margin: 100px auto;
+        }
+
+        .prve {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -15px;
+            width: 20px;
+            height: 30px;
+            background: rgba(0, 0, 0, .3);
+            text-align: center;
+            line-height: 30px;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 0 50% 50% 0;
+        }
+
+        .next {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            margin-top: -15px;
+            width: 20px;
+            height: 30px;
+            background: rgba(0, 0, 0, .3);
+            text-align: center;
+            line-height: 30px;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50% 0 0 50%;
+        }
+
+        .promo-nav {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            margin-left: -35px;
+            width: 70px;
+            height: 13px;
+            background: rgba(255, 255, 255, .3);
+            border-radius: 7px;
+        }
+
+        .promo-nav li {
+            float: left;
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            margin-left: 5px;
+            margin-top: 2.5px;
+            border-radius: 4px;
+        }
+
+        .promo-nav li:hover {
+            background-color: #ff5000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tb-promo">
+        <img src="./images/tb.jpg" alt="">
+        <!-- 按钮 -->
+        <a href="#" class="prve">
+            < </a>
+                <a href="#" class="next">
+                    >
+                </a>
+                <ul class="promo-nav">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+    </div>
+</body>
+
+</html>

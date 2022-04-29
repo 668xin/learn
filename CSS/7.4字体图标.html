@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字体图标</title>
+    <style>
+        @font-face {
+            font-family: 'icomoon';
+            src: url('fonts/icomoon.eot?p4ssmb');
+            src: url('fonts/icomoon.eot?p4ssmb#iefix') format('embedded-opentype'),
+                url('fonts/icomoon.ttf?p4ssmb') format('truetype'),
+                url('fonts/icomoon.woff?p4ssmb') format('woff'),
+                url('fonts/icomoon.svg?p4ssmb#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+
+        span {
+            font-family: 'icomoon';
+        }
+    </style>
+</head>
+
+<body>
+    1.用好多图标一样的东西其实是字体，可以设置大小，颜色，放大不会模糊
+
+    --字体图标的使用
+    1.在网上下载下来
+    2.在网页代码的根目录下创建fonts文件夹，将内容复制过来
+    放在代码同一文件夹下
+    3.在css中输入代码(字体申明)
+    @font-face {
+    font-family: 'icomoon';
+    src: url('fonts/icomoon.eot?p4ssmb');
+    src: url('fonts/icomoon.eot?p4ssmb#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?p4ssmb') format('truetype'),
+    url('fonts/icomoon.woff?p4ssmb') format('woff'),
+    url('fonts/icomoon.svg?p4ssmb#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+    }
+    4.复制下载的图标放在标签里，用font-frimary:'icomoon';
+    确定字体
+
+    字体图标的追加
+    -点击 importi cons在选择文件夹里的selection.json
+    <span></span>
+
+    注意点
+    如果用的是用外连接的写法要改变路径
+</body>
+
+</html>

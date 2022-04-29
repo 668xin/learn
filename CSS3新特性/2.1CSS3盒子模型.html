@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3盒子模型</title>
+    css3可以通过 box-sizing 来指定盒子的大小
+    有两个值来指定
+    1.是原来的 box-sizing:cont-box;
+    盒子的大小是 width+padding+border 需要计算 默认的
+
+    2. 最新的直接确定盒子的大小
+    --box-sizing: border-box 那么盒子的大小就是width
+    不会被padding和border的撑大盒子
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border: 20px solid red;
+            padding: 15px;
+            box-sizing: content-box;
+        }
+
+        p {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border: 20px solid red;
+            padding: 15px;
+            /* css3 盒子模型  盒子最终的大小就是 width  200 的大小 */
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        小猪乔治
+    </div>
+    <br>
+    <p>
+        小猪佩奇
+    </p>
+</body>
+
+</html>

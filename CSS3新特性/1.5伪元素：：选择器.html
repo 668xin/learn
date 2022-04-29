@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪元素选择器</title>
+    可以帮助我们利用css创建新标签，不需要HTML标签，从而简化HTML结构
+    可以创建一个元素，在文档树中找不到的。 但都是行内元素
+    element::before/after
+    before和after都要有content属性
+    content:" ";里面写内容
+    before在父元素前面创建元素
+    after在父元素后面创建元素
+    和标签选择器一样，权重是1
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        /* div::before 权重是2 */
+        div::before {
+            /* 这个content是必须要写的 */
+            /* display: inline-block; */
+            content: '我';
+            /* width: 30px;
+            height: 40px;
+            background-color: purple; */
+        }
+
+        div::after {
+            content: '小猪佩奇';
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        是
+    </div>
+</body>
+
+</html>

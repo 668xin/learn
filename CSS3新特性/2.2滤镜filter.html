@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter滤镜效果 有好多</title>
+    filter: 函数()
+    filter: blur(); blur是模糊处理，数值越大越模糊
+    <style>
+        img {
+            /* blur是一个函数 小括号里面数值越大，图片越模糊 注意数值要加px单位 */
+            filter: blur(15px);
+        }
+
+        img:hover {
+            filter: blur(0);
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            filter: blur(2px);
+        }
+
+        div:hover {
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="images/pink.jpg" alt="">
+    <div></div>
+</body>
+
+</html>

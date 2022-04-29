@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多媒体标签</title>
+    <style>
+        video {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    1.视频 video
+    语法和照片一样 建议用 MP4
+    属性
+    autoplay:autoplay -视频就绪自动播放（无法播放可以设置muted静音播放）
+    controls: controls -向用户显示播放插件(就是暂停 快进条 )
+    wideh height 设置播放器的宽高
+    loop: loop --播放完是否继续播放
+    preload: auto(预先加载视频)
+    ---------none(不应加载视频) -规定是否预加载视频，有autoplay就忽略
+    src -视频地址
+    poster: 后面加图片地址 (等待加载过程时的图片)
+    muted: muted(静音播放)
+    <video src="./media/mi.mp4" autoplay="autoplay" muted="muted" controls="controls" poster="./media/mi9.jpg">
+    </video>
+
+    2.音频 audio
+    autoplay:autoplay -音频自动播放
+    controls: controls -显示播放控件 比如开始按钮
+    loop: loop --播放完重复继续播放
+    src: 音频地址建议用MP3
+    <audio src="./media/music.mp3" autoplay="autoplay" controls="controls"></audio>
+</body>
+
+</html>
